@@ -18,6 +18,13 @@ namespace TeamProj
 
                 foreach (var item in q)
                     Console.WriteLine(item.name);
+
+                var q1 = c.Good
+                    .Where(b => b.salesman.id.Equals(1))
+                    .ToList();
+
+                foreach (var item in q)
+                    Console.WriteLine(item.name);
             }
         }
     }
