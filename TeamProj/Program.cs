@@ -13,7 +13,7 @@ namespace TeamProj
             using (var c = new Context())
             {
                 var q = c.Good
-                    .Where(b => b.name.StartsWith("K"))
+                    .Where(b => b.name.StartsWith("G"))
                     .ToList();
 
                 foreach (var item in q)
