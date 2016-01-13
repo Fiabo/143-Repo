@@ -10,7 +10,15 @@ namespace TeamProj
     {
         static void Main(string[] args)
         {
+            using (var c = new Context())
+            {
+                var q = c.Good
+                    .Where(b => b.name.StartsWith("I"))
+                    .ToList();
 
+                foreach (var item in q)
+                    Console.WriteLine(item.name);
+            }
         }
     }
 }
